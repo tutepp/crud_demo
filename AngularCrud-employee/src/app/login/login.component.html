@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-6 offset-3">
+    <form (ngSubmit) = "onSubmit()" [formGroup]="login">
+      <div class="card">
+        <img class="card-img-top" src="holder.js/100x180/" alt="" />
+        <div class="card-body">
+          <div class="form-group" >
+            <label for="">Email</label>
+            <input formControlName = "email"
+              type="text"
+              class="form-control"
+              name="password"
+              aria-describedby="helpId"
+              placeholder="Your email"
+            />
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+
+          <div class="form-group">
+            <label for="">Password</label>
+            <input formControlName = "password"
+              type="password"
+              class="form-control"
+              name="password"
+
+              aria-describedby="helpId"
+              placeholder="Password"
+            />
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+        </div>
+        <div class= "card-footer text-center">
+          <button type="submit" class="btn btn-success" [disabled]="login.invalid">Login</button>
+          <button type="reset" class="btn btn-primary">Reset</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>

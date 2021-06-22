@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col-md-6 offset-3">
+    <form (ngSubmit) = "onSubmit()" [formGroup]="registerForm">
+      <div class="card">
+        <img class="card-img-top" src="holder.js/100x180/" alt="" />
+        <div class="card-body">
+          <div class="form-group" >
+            <label for="">First Name</label>
+            <input formControlName = "firstName"
+              type="text"
+              class="form-control"
+              name="firstName"
+              aria-describedby="helpId"
+              placeholder="First Name"
+            />
+            <!-- <p *ngIf = "registerForm.get('firstName')?.hasError('required')" >Ten khong de trong</p> -->
+            <small id="helpId" class="form-text text-muted">First Name</small>
+          </div>
+
+          <div class="form-group" >
+            <label for="">Last Name</label>
+            <input formControlName = "lastName"
+              type="text"
+              class="form-control"
+              name="lastName  "
+              aria-describedby="helpId"
+              placeholder="Last Name"
+            />
+            <small id="helpId" class="form-text text-muted">Last Name</small>
+          </div>
+
+          <div class="form-group" >
+            <label for="">Date of birth</label>
+            <input formControlName = "dateOfBirth"
+              type="date"
+              class="form-control"
+              name="dateOfBirth"
+              aria-describedby="helpId"
+              placeholder="Date of birth"
+            />
+            <small id="helpId" class="form-text text-muted">Date of birth</small>
+          </div>
+
+          <div class="form-group" >
+            <label for="">Email</label>
+            <input formControlName = "email"
+              type="text"
+              class="form-control"
+              name="password"
+              aria-describedby="helpId"
+              placeholder="Your email"
+            />
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+
+
+          <div class="form-group">
+            <label for="">Password</label>
+            <input formControlName = "password"
+              type="password"
+              class="form-control"
+              name="password"
+
+              aria-describedby="helpId"
+              placeholder="Password"
+            />
+            <small id="helpId" class="form-text text-muted">Password</small>
+          </div>
+
+          <div class="form-group">
+            <label for="">Confirm Password</label>
+            <input formControlName = "confirmPassword"
+              type="password"
+              class="form-control"
+              name="confirmPassword"
+
+              aria-describedby="helpId"
+              placeholder="Confirm Password"
+            />
+            <small id="helpId" class="form-text text-muted">Confirm Password</small>
+          </div>
+
+
+        </div>
+        <div class= "card-footer text-center">
+          <button type="submit" class="btn btn-success" [disabled]="registerForm.invalid">Register</button>
+          <button type="reset" class="btn btn-primary">Reset</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
